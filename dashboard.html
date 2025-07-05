@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - SaaS Frontend</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-gray-100 h-screen flex flex-col">
+    <!-- Top Bar -->
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <button class="md:hidden p-2">
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <h1 class="text-lg font-semibold">Unified Inbox</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded">
+          Telosa AI
+        </button>
+        <img
+          src="https://randomuser.me/api/portraits/men/32.jpg"
+          alt="Profile"
+          class="w-8 h-8 rounded-full"
+        />
+      </div>
+    </header>
+
+    <main class="flex flex-1 overflow-hidden">
+      <!-- Sidebar -->
+      <aside class="w-72 bg-white border-r overflow-y-auto hidden md:block">
+        <div class="p-4 border-b">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full border px-2 py-1 rounded"
+          />
+        </div>
+        <nav class="p-4 space-y-2">
+          <a
+            href="#"
+            class="block px-3 py-2 bg-blue-100 rounded text-blue-700 font-medium"
+            >All (20)</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded"
+            >Unread (2)</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded"
+            >Priority</a
+          >
+          <a href="#" class="block px-3 py-2 hover:bg-gray-100 rounded"
+            >Un-replied (10)</a
+          >
+        </nav>
+        <div class="p-4 space-y-4">
+          <!-- Message Items -->
+          <div class="space-y-2">
+            <div class="flex items-start space-x-2">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                class="w-8 h-8 rounded-full"
+              />
+              <div>
+                <p class="font-semibold">Jacob Jones</p>
+                <p class="text-sm text-gray-600">
+                  Great quality and attention...
+                </p>
+              </div>
+              <span class="ml-auto text-xs text-gray-500">5:42 PM</span>
+            </div>
+            <div class="flex items-start space-x-2">
+              <img
+                src="https://randomuser.me/api/portraits/men/46.jpg"
+                class="w-8 h-8 rounded-full"
+              />
+              <div>
+                <p class="font-semibold">Marvin McKinney</p>
+                <p class="text-sm text-gray-600">The team is talented...</p>
+              </div>
+              <span class="ml-auto text-xs text-gray-500">3:20 PM</span>
+            </div>
+            <!-- Add more messages if you like -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Review Section -->
+      <section class="flex-1 overflow-y-auto p-6">
+        <div class="bg-white p-4 rounded shadow">
+          <div class="flex justify-between items-start">
+            <div>
+              <h2 class="font-semibold">Marvin McKinney</h2>
+              <p class="text-xs text-gray-500">
+                Posted on Jun 24, 2025 - 3:20 PM
+              </p>
+            </div>
+            <span class="text-yellow-500">⭐⭐⭐ 3.0</span>
+          </div>
+          <p class="mt-4 text-gray-700">
+            The team is talented and their product was good, but communication
+            could be better. I had to follow up multiple times to get updates.
+          </p>
+          <div class="flex space-x-2 mt-4">
+            <img
+              src="https://via.placeholder.com/60"
+              class="w-16 h-16 object-cover rounded"
+            />
+            <img
+              src="https://via.placeholder.com/60"
+              class="w-16 h-16 object-cover rounded"
+            />
+            <img
+              src="https://via.placeholder.com/60"
+              class="w-16 h-16 object-cover rounded"
+            />
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded shadow mt-4">
+          <h3 class="font-semibold mb-2">Your Reply</h3>
+          <p class="text-gray-700 mb-4">
+            Really appreciate you taking the time to share this. We're working
+            on being more proactive with communication. Thank you for the
+            feedback!
+          </p>
+          <form class="flex items-center space-x-2">
+            <input
+              type="text"
+              placeholder="Enter your reply here..."
+              class="flex-1 border px-2 py-1 rounded"
+            />
+            <button class="bg-blue-500 text-white px-3 py-1 rounded">
+              Send
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
